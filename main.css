@@ -1,28 +1,86 @@
 body {
-    background-color: black;
-    color: white;
     text-decoration: none;
+    color: lightgray;
+    margin: 0;
 }
 
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-sizing: border-box
+main {
+    background-color: black;
 }
 
 a {
     text-decoration: none;
-    color: white
+    color: black
 }
 
-header nav {
-    width: 50%;
-    background: black;
+h4 {
+    margin: 0.25rem;
 }
 
-header ul {
+.header {
+    background-color: white;
+    height: 2rem;
+}
+
+.navigation {
     list-style: none;
     display: flex;
     justify-content: space-around;
+    padding: 0
 }
+
+.top {
+    background-image: url(./resources/trees_50.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 20rem;
+    text-align: center;
+    align-content: center;
+}
+
+.top__holder {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+section {
+    background-color: black;
+}
+
+.middle {
+    text-align: center;
+}
+
+.middle__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin: 1rem;
+}
+
+.middle__subsection {
+    border: 2px solid grey;
+    width: 25%;
+    min-width: 12rem;
+    text-align: center;
+    margin: .5rem;
+}
+
+.middle__img {
+    height: auto;
+    width: 30%;
+}
+
+.middle__icons {
+    display: flex;
+    justify-content: space-around;
+}
+
+.middle__icon img{
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 1px solid gainsboro;
+}
+/* .project__discription {
+
+} */
