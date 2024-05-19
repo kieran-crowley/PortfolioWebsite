@@ -10,13 +10,13 @@ main {
 
 /* header {
     position: fixed;
-    background-color: white;
     width: 100%;
+    background-color: grey;
 } */
 
 a {
     text-decoration: none;
-    color: black
+    color: grey
 }
 
 h4 {
@@ -24,7 +24,6 @@ h4 {
 }
 
 .header {
-    background-color: white;
     height: 2rem;
 }
 
@@ -42,14 +41,11 @@ h4 {
     height: 40rem;
     text-align: center;
     align-content: center;
+    border-bottom: 1px solid grey;
 }
 
 .top__holder {
     background-color: rgba(0, 0, 0, 0.7);
-}
-
-section {
-    background-color: black;
 }
 
 .middle {
@@ -57,7 +53,7 @@ section {
 }
 
 .middle__title {
-    margin: 5rem;
+    margin: 1rem;
 }
 
 .middle__wrapper {
@@ -65,7 +61,8 @@ section {
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    margin: 1rem;
+    padding: 2rem 0;
+    border-bottom: 1px solid grey;
 }
 
 .middle__subsection {
@@ -74,6 +71,7 @@ section {
     min-width: 12rem;
     text-align: center;
     margin: .5rem;
+    border-radius: 1rem;
 }
 
 .middle__img {
@@ -104,13 +102,14 @@ section {
     text-align: center;
 }
 
-.bottom__header {
-    margin: 5rem;
+.bottom__title {
+    margin: 1rem;
 }
 
 .bottom__icons {
     display: flex;
     justify-content: space-around;
+    padding: 2rem 0;
 }
 
 .bottom__icon {
@@ -127,5 +126,5 @@ footer {
     flex-wrap: wrap;
     justify-content: space-around;
     align-content: center;
-    color: black;
+    color: gray;
 }
