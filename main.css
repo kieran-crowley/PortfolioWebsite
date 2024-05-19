@@ -8,6 +8,12 @@ main {
     background-color: black;
 }
 
+/* header {
+    position: fixed;
+    background-color: white;
+    width: 100%;
+} */
+
 a {
     text-decoration: none;
     color: black
@@ -33,7 +39,7 @@ h4 {
     background-image: url(./resources/trees_50.jpg);
     background-size: cover;
     background-position: center;
-    height: 20rem;
+    height: 40rem;
     text-align: center;
     align-content: center;
 }
@@ -48,6 +54,10 @@ section {
 
 .middle {
     text-align: center;
+}
+
+.middle__title {
+    margin: 5rem;
 }
 
 .middle__wrapper {
@@ -67,8 +77,15 @@ section {
 }
 
 .middle__img {
+    height: 12rem;
+    width: 80%;
+    margin: auto;
+    align-content: center;
+}
+
+.middle__img img {
     height: auto;
-    width: 30%;
+    width: 80%;
 }
 
 .middle__icons {
@@ -76,11 +93,39 @@ section {
     justify-content: space-around;
 }
 
-.middle__icon img{
+.middle__icon {
     width: 2.5rem;
     height: 2.5rem;
     border: 1px solid gainsboro;
+    margin: .5rem;
 }
-/* .project__discription {
 
-} */
+.bottom {
+    text-align: center;
+}
+
+.bottom__header {
+    margin: 5rem;
+}
+
+.bottom__icons {
+    display: flex;
+    justify-content: space-around;
+}
+
+.bottom__icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 1px solid gainsboro;
+    overflow: hidden;
+    margin: .5rem;
+}
+
+footer {
+    height: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
+    color: black;
+}
