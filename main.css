@@ -23,6 +23,12 @@ h4 {
     margin: 0.25rem;
 }
 
+textarea {
+    padding: 1rem;
+    border-radius: 1rem;
+    width: 100%;
+}
+
 .header {
     height: 2rem;
 }
@@ -32,6 +38,11 @@ h4 {
     display: flex;
     justify-content: space-around;
     padding: 0
+}
+
+.navigation__link--selected {
+    text-decoration: underline;
+    color: black;
 }
 
 .top {
@@ -66,7 +77,7 @@ h4 {
 }
 
 .middle__subsection {
-    border: 2px solid grey;
+    border: .5rem solid grey;
     width: 25%;
     min-width: 12rem;
     text-align: center;
@@ -120,6 +131,11 @@ h4 {
     margin: .5rem;
 }
 
+.bottom__icon--selected {
+    width: 3.5rem;
+    height: 3.5rem;
+}
+
 footer {
     height: 3rem;
     display: flex;
@@ -127,4 +143,45 @@ footer {
     justify-content: space-around;
     align-content: center;
     color: gray;
+}
+
+
+/* contact css area*/
+.middle__form {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    justify-items: left;
+    align-items: center;
+    gap: 1rem 1.25rem;
+}
+
+#label1 {
+    grid-area: 1 / 3;
+}
+
+#name {
+    grid-area: 1 / 4 / 1 / span 2;
+}
+
+#label2 {
+    grid-area: 3 / 3;
+}
+#number {
+    grid-area: 3 / 4 / 3 / span 2;
+}
+
+#label3 {
+    grid-area: 5 / 3;
+}
+#comment {
+    grid-area: 5 / 4 / 5 / span 2;
+}
+
+.middle__submit {
+    grid-area: 7 / 3 / 7 / 5;
+    width: 100%;
+    color: gray;
+    background-color: white;
+    border-radius: 1rem;
+    border: 2px solid grey;
 }
