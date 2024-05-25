@@ -24,4 +24,3 @@ function addEventListers(e, element) {
     }
     
 }
-
