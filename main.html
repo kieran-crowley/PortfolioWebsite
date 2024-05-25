@@ -5,22 +5,95 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Website</title>
+    <link href="./main.css" rel="stylesheet">
+
 </head>
 
 <body>
+    <!-- header-->
     <header>
-        <img src="./resources/webLogo.jpg" alt="'logo">
-        <nav>
-            <ul>
-                <li><a href="" title="link one">link one</a></li>
-                <li><a href="" title="link two">link two</a></li>
-                <li><a href="" title="link three">link three</a></li>
-            </ul>
-        </nav>
-
+        <ul class="navigation">
+            <li class="navigation__item">
+                <a class='navigation__link navigation__link--selected' href="" title="link one">Home</a>
+            </li>
+            <li class="navigation__item">
+                <a class='navigation__link' href="./contact.html" title="contact page">Contact</a>
+            </li>
+        </ul>
     </header>
-    <main></main>
-    <footer></footer>
+
+    <main>
+        <section class="top">
+            <div class="top__holder">
+                <h1 class="top__title">Kieran Crowley</h1>
+                <p class="top__discription">Web Developer with over 3 years professional experiance</p>
+            </div>
+        </section>
+
+        <section class="middle">
+            <h2 class="middle__title">Few of my projects</h2>
+            <div class="middle__wrapper">
+
+                <div class="middle__subsection">
+                    <h4 class="middle__name">Mortgage Calculator</h4>
+                    <div class="middle__img">
+                        <img class='middle__img' src="./resources/calculator.png" alt="project__img">
+                    </div>
+                    <p class="middle__discription">about the priject this that anyd everything else</p>
+                    <div class="middle__icons">
+                        <img class="middle__icon" src="./resources/css.png" alt="icon">
+                        <img class="middle__icon" src="./resources/js.png" alt="icon">
+                        <img class="middle__icon" src="./resources/html.png" alt="icon">
+                    </div>
+                </div>
+
+                <div class="middle__subsection">
+                    <h4 class="middle__name">Tea Shop</h4>
+                    <div class="middle__img">
+                        <img src="./resources/teashop.jpg" alt="project__img">
+                    </div>
+                    <p class="middle__discription">about the priject this that anyd everything else</p>
+                    <div class="middle__icons">
+                        <img class="middle__icon" src="./resources/css.png" alt="icon">
+                        <img class="middle__icon" src="./resources/js.png" alt="icon">
+                        <img class="middle__icon" src="./resources/html.png" alt="icon">
+
+                    </div>
+                </div>
+
+                <div class="middle__subsection">
+                    <h4 class="middle__name">Photo Shop</h4>
+                    <div class="middle__img">
+                        <img src="./resources/camera.png" alt="project__img">
+                    </div>
+                    <p class="middle__discription">about the priject this that anyd everything else</p>
+                    <div class="middle__icons">
+                        <img class="middle__icon" src="./resources/css.png" alt="icon">
+                        <img class="middle__icon" src="./resources/js.png" alt="icon">
+                        <img class="middle__icon" src="./resources/html.png" alt="icon">
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="bottom">
+            <h2 class="bottom__title">Languages and skills:</h2>
+            <div class="bottom__icons">
+                <img class="bottom__icon" src="./resources/html.png" alt="icon">
+                <img class="bottom__icon" src="./resources/css.png" alt="icon">
+                <img class="bottom__icon" src="./resources/js.png" alt="icon">
+                <img class="bottom__icon" src="./resources/git.png" alt="icon">
+            </div>
+        </section>
+    </main>
+
+    <footer class="contacts">
+        <span class="contact contacts__number">07498238585</span>
+        <span class="contact contacts__email">kierancrowley@hotmail.co.uk </span>
+    </footer>
 </body>
+<script src="./main.js" defer></script>
 
 </html>
