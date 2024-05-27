@@ -10,13 +10,18 @@ let courasel = document.querySelector('.middle__courasel');
 let button = document.querySelectorAll('.middle__button')
 let thumb = document.querySelector('.middle__thumb');
 let slider = document.querySelector('.middle__scroll-bar');
-
 let couraselViewWindow = courasel.offsetWidth/3;
 let couraselWidth = courasel.scrollWidth
 let scrollingRatio = courasel.offsetWidth / slider.offsetWidth;
 let thumbRatio = slider.offsetWidth / courasel.offsetWidth
 let thumbPosition;
 
+window.onresize = () => {
+    couraselViewWindow = courasel.offsetWidth/3;
+    couraselWidth = courasel.scrollWidth
+    scrollingRatio = courasel.offsetWidth / slider.offsetWidth;
+    thumbRatio = slider.offsetWidth / courasel.offsetWidth
+}
 
 document.onpointerover = (e) => {
     elements.forEach(item => {
@@ -41,7 +46,6 @@ slider.onpointerdown = (e) => {
  //move thumb when scroll moved. 
  courasel.onscroll = () => {
     moveThumb(courasel.scrollLeft * thumbRatio)
-    console.log(courasel.scrollLeft * thumbRatio)
  }
 
 function moveCarasel(amount) {
