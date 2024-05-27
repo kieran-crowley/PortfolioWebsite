@@ -4,11 +4,19 @@ let elements = [
     'navigation__link', 
     'contact',
     'middle__submit',
-    // 'navigation__item'
 ];
 
-let courasel = document.querySelectorAll('.middle-courasel');
-console.log(courasel)
+let courasel = document.querySelector('.middle__courasel');
+let button = document.querySelectorAll('.middle__button')
+let thumb = document.querySelector('.middle__thumb');
+let slider = document.querySelector('.middle__scroll-bar');
+
+let couraselViewWindow = courasel.offsetWidth/3;
+let couraselWidth = courasel.scrollWidth
+let scrollingRatio = courasel.offsetWidth / slider.offsetWidth;
+let thumbRatio = slider.offsetWidth / courasel.offsetWidth
+let thumbPosition;
+
 
 document.onpointerover = (e) => {
     elements.forEach(item => {
@@ -16,15 +24,41 @@ document.onpointerover = (e) => {
             scale(e, item);
         }
     })
+};
+
+button.forEach(item => {
+    item.onclick = (e) => {
+        scrollCarasel(item);
+    }
+});
+
+slider.onpointerdown = (e) => {
+    thumbPosition = e.clientX - slider.offsetLeft - (thumb.offsetWidth/2);
+    moveThumb(thumbPosition)
+    moveCarasel(thumbPosition * scrollingRatio)
+ }
+
+ //move thumb when scroll moved. 
+ courasel.onscroll = () => {
+    moveThumb(courasel.scrollLeft * thumbRatio)
+    console.log(courasel.scrollLeft * thumbRatio)
+ }
+
+function moveCarasel(amount) {
+    courasel.scrollLeft = amount;
 }
 
-courasel.forEach(item => item.onclick = () => console.log('clicked'))
+function moveThumb(amount) {
+    thumb.style.left = amount + "px"
+}
 
-
-
-
-
-
+function scrollCarasel(element) {
+    if(element.id === 'left') {
+        courasel.scrollLeft += couraselViewWindow;
+    } else if (element.id === 'right') {
+        courasel.scrollLeft -= couraselViewWindow;
+    }
+}
 
 function scale(e, element) {
     e.target.classList.add(element + '--selected')
