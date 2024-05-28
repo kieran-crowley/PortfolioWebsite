@@ -32,7 +32,7 @@ document.onpointerover = (e) => {
 };
 
 button.forEach(item => {
-    item.onclick = (e) => {
+    item.onclick = () => {
         scrollCarasel(item);
     }
 });
@@ -43,7 +43,6 @@ slider.onpointerdown = (e) => {
     moveCarasel(thumbPosition * scrollingRatio)
  }
 
- //move thumb when scroll moved. 
  courasel.onscroll = () => {
     moveThumb(courasel.scrollLeft * thumbRatio)
  }

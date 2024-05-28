@@ -65,6 +65,7 @@ textarea {
 .middle {
     text-align: center;
     border-bottom: 1px solid grey;
+    overflow: hidden;
 }
 
 .middle__title {
@@ -79,9 +80,10 @@ textarea {
 }
 
 .middle__button {
-    width: 2rem;
+    width: 4rem;
     height: 2rem;
     margin: 1rem;
+    border-radius: 50%;
 }
 
 .middle__courasel {
@@ -89,9 +91,9 @@ textarea {
     justify-content: space-evenly;
     align-items: center;
     padding: 1rem 0;
-    scroll-behavior: smooth;
     overflow: scroll;
     scrollbar-width: none;
+    scroll-behavior: smooth;
 }
 
 .middle__subsection {
@@ -181,9 +183,20 @@ footer {
 
 
 /* contact css area*/
+
+.contactPage .middle {
+    width: auto;
+}
+
+.contactPage .middle__wrapper {
+    margin: auto;
+    display: block;
+    width: auto;
+}
+
 .middle__form {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(6, 1fr);
     justify-items: left;
     align-items: center;
     gap: 1rem 1.25rem;
@@ -214,12 +227,13 @@ footer {
 }
 
 .middle__submit {
-    grid-area: 7 / 3 / 7 / 5;
+    grid-area: 7 / 4 / 7 / 6;
     width: 100%;
     color: gray;
     background-color: white;
     border-radius: 1rem;
     border: 2px solid grey;
+    margin: 0 0 1rem 0;
 }
 
 .middle__submit--selected {
