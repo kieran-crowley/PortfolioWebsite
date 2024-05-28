@@ -246,3 +246,15 @@ footer {
     color: black;
     scale: 1.1;
 }
+
+@media only screen and (max-width: 1000px) {
+    .middle__wrapper {
+        width: 42rem;
+    }
+  }
+
+@media only screen and (max-width: 650px) {
+    .middle__wrapper {
+        width: 25rem;
+    }
+  }
