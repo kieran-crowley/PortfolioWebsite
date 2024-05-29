@@ -10,11 +10,13 @@ let courasel = document.querySelector('.middle__courasel');
 let button = document.querySelectorAll('.middle__button')
 let thumb = document.querySelector('.middle__thumb');
 let slider = document.querySelector('.middle__scroll-bar');
+
 let couraselViewWindow = courasel.offsetWidth/3;
 let couraselWidth = courasel.scrollWidth
 let scrollingRatio = courasel.offsetWidth / slider.offsetWidth;
 let thumbRatio = slider.offsetWidth / courasel.offsetWidth
 let thumbPosition;
+slider.scrollLeft = 0 + 'px'
 
 window.onresize = () => {
     couraselViewWindow = courasel.offsetWidth/3;
